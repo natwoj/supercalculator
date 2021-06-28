@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <header>
+               <h1> JS Supercalculator!</h1>
+               <p>Share with friends and help us grow! </p>
+               </header>
+            <div class="box1">
+            <h2>Step 1. Pick first numer or string</h2>
+               <input type="text" id="operand1" value="1" />
+               <select id="typ-operandu">
+                 <option value>liczba</option>
+                 <option value>string</option>
+               </select>
+             </div>
+             <div class="box2">
+               <h2>Krok 2: wybierz działanie.</h2>
+               <div class="wybor-operatora">
+                 <h3> Operatory arytmetyczne:</h3>
+                 <input type="radio" name="operator" value="+" checked />+
+                 <input type="radio" name="operator" value="-" />-
+                 <input type="radio" name="operator" value="*" />*
+                 <input type="radio" name="operator" value="/" />/
+                 <input type="radio" name="operator" value="%" />%
+                 <h3> Operatory napisowe:</h3>
+                 <input type="radio" name="operator" value="konkatenacja" />+(konkatenacja)
+                 <h3> Operatory porównania</h3>
+                 <input type="radio" name="operator" value="==" />==&nbsp;
+                 <input type="radio" name="operator" value="===" />===&nbsp;
+                 <input type="radio" name="operator" value="!=" />!=&nbsp;
+                 <input type="radio" name="operator" value="!==" />!==&nbsp;
+                 <input type="radio" name="operator" value=">" />>&nbsp;
+                 <input type="radio" name="operator" value=">=" />&gt;=&nbsp;
+                 <input type="radio" name="operator" value="<" />&lt;&nbsp;
+                 <input type="radio" name="operator" value="<=" />&lt;=&nbsp;
+                  </div>
+                   </div>
+                  <div class="box3">
+               <h2>Krok 3: wybierz drugą liczbę. </h2>
+               <input type="text" id="operand2" value="1" />
+               <seleSct id="typ-operandu">
+                 <option value>liczba</option>
+                 <option value>string</option>
+               </select>
+             </div>
+              <div class="box4">
+               <h2>Krok 4: Wykonaj działanie! Kliknij przycisk </h2>
+               <input type="submit" id="wyslij" value="Licz!" />
+               </div>
+              <div class="box5">
+               <h2>WYJŚCIE </h2> 
+               <h3>Działanie:</h3>
+                <span id="koncowa-operacja">???</span>
+               <h3> Twój wynik to:</h3>
+                <span id="wynik">???</span>
+             </div>
+              </div>
+        
+        <script src="javascript.js" async defer></script>
+    </body>
+</html>
