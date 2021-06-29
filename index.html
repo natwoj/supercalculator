@@ -14,65 +14,61 @@
     </head>
 
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="container">
-            <header>
-               <h1> JS Supercalculator!</h1>
-               <p>Share with friends and help us grow! </p>
-               </header>
-            <div class="box1">
-            <h2>Step 1. Pick first numer or string</h2>
-               <input type="text" id="operand1" value="1" />
-               <select id="typ-operandu">
-                 <option value>liczba</option>
-                 <option value>string</option>
-               </select>
+      <div class="container">
+      <header>
+         <h1> JS Supercalculator!</h1>
+         <p>Share with friends and help us grow! </p>
+         </header>
+      <div class="box1">
+      <h2>Step 1. Pick first numer or string</h2>
+         <input type="text" id="operand1" value="1" />
+         <select id="operand-type1">
+           <option value>number</option>
+           <option value>string</option>
+         </select>
+       </div>
+       <div class="box2">
+         <h2>Step 2 Pick Operator</h2>
+         <div class="wybor-operatora">
+           <h3> Arithmetic:</h3>
+           <input type="radio" name="operator" value="+" checked />+
+           <input type="radio" name="operator" value="-" />-
+           <input type="radio" name="operator" value="*" />*
+           <input type="radio" name="operator" value="/" />/
+           <input type="radio" name="operator" value="%" />%
+           <h3> Concatenation</h3>
+           <input type="radio" name="operator" value="konkatenacja" />+(concatenation)
+           <h3> Comparison:</h3>
+           <input type="radio" name="operator" value="==" />==&nbsp;
+           <input type="radio" name="operator" value="===" />===&nbsp;
+           <input type="radio" name="operator" value="!=" />!=&nbsp;
+           <input type="radio" name="operator" value="!==" />!==&nbsp;
+           <input type="radio" name="operator" value=">" />>&nbsp;
+           <input type="radio" name="operator" value=">=" />&gt;=&nbsp;
+           <input type="radio" name="operator" value="<" />&lt;&nbsp;
+           <input type="radio" name="operator" value="<=" />&lt;=&nbsp;
+            </div>
              </div>
-             <div class="box2">
-               <h2>Krok 2: wybierz działanie.</h2>
-               <div class="wybor-operatora">
-                 <h3> Operatory arytmetyczne:</h3>
-                 <input type="radio" name="operator" value="+" checked />+
-                 <input type="radio" name="operator" value="-" />-
-                 <input type="radio" name="operator" value="*" />*
-                 <input type="radio" name="operator" value="/" />/
-                 <input type="radio" name="operator" value="%" />%
-                 <h3> Operatory napisowe:</h3>
-                 <input type="radio" name="operator" value="konkatenacja" />+(konkatenacja)
-                 <h3> Operatory porównania</h3>
-                 <input type="radio" name="operator" value="==" />==&nbsp;
-                 <input type="radio" name="operator" value="===" />===&nbsp;
-                 <input type="radio" name="operator" value="!=" />!=&nbsp;
-                 <input type="radio" name="operator" value="!==" />!==&nbsp;
-                 <input type="radio" name="operator" value=">" />>&nbsp;
-                 <input type="radio" name="operator" value=">=" />&gt;=&nbsp;
-                 <input type="radio" name="operator" value="<" />&lt;&nbsp;
-                 <input type="radio" name="operator" value="<=" />&lt;=&nbsp;
-                  </div>
-                   </div>
-                  <div class="box3">
-               <h2>Krok 3: wybierz drugą liczbę. </h2>
-               <input type="text" id="operand2" value="1" />
-               <seleSct id="typ-operandu">
-                 <option value>liczba</option>
-                 <option value>string</option>
-               </select>
-             </div>
-              <div class="box4">
-               <h2>Krok 4: Wykonaj działanie! Kliknij przycisk </h2>
-               <input type="submit" id="wyslij" value="Licz!" />
-               </div>
-              <div class="box5">
-               <h2>WYJŚCIE </h2> 
-               <h3>Działanie:</h3>
-                <span id="koncowa-operacja">???</span>
-               <h3> Twój wynik to:</h3>
-                <span id="wynik">???</span>
-             </div>
-              </div>
-        
-        <script src="javascript.js" async defer></script>
-    </body>
+            <div class="box3">
+         <h2>Step 3. Pick another numer or string </h2>
+         <input type="text" id="operand2" value="1" />
+         <select id="operand-type2">
+           <option value>number</option>
+           <option value>string</option>
+         </select>
+       </div>
+        <div class="box4">
+         <h2>Step 4. Take your action! Click the button! </h2>
+         <input type="submit" id="send" value="Give me result!"/>
+         </div>
+        <div class="box5">
+         <h2>EXIT </h2> 
+         <h3>Action</h3>
+          <span id="koncowa-operacja">???</span>
+         <h3> Your result is:</h3>
+          <span id="wynik">???</span>
+       </div>
+        </div>
+     </body>
+     
 </html>
