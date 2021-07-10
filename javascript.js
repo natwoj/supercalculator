@@ -1,6 +1,7 @@
 //on click
-document.getElementById = "send".addEventListener("click", ourResult);
-function ourResult() {
+document.getElementById("send").addEventListener("click", ourResult);
+function ourResult() 
+{
   var mineOperator;
   var result;
   //taking values from operands
@@ -29,22 +30,76 @@ function ourResult() {
   }
   switch (operandValue2) {
   case "string":
-  	operand2 = String(operand2)
+  	operand2 = String(operand2);
     break;
   case "number":
-  operand2 = Number(operand2) 
+  operand2 = Number(operand2);
   break;
-    
   }
-  
-  // go through all operators and give picked
-  for ()
-  
-  
-  
-  
-  
-  
-  
-
+  // go through all operators and give me checked
+  for (var i = 0, operatorsNumber = allOperators.length; i < operatorsNumber; i++)
+  { 
+    if (allOperators[i].checked) {
+      mineOperator = allOperators[i].value;
+      //make operation depends on operator
+      switch (allOperators[i].value) {
+        case "+":
+          result = operand1 + operand2;
+          break;
+        case "-":
+          result = operand1 - operand2;
+          break;
+        case "*":
+         result = operand1 * operand2;
+        break;
+        case "/":
+        result = operand1 / operand2;
+        break;
+        case "%":
+        result = operand1 % operand2;
+        break;
+        case "concatenation":
+        result = operand1 + operand2;
+        mineOperator = "+";
+        break;
+        case "==":
+        result = operand1 == operand2;
+        break;
+        case "===":
+        result = operand1 === operand2;
+        break;
+        case "!=":
+        result = operand1 != operand2;
+        break;
+        case "!==":
+        result = operand1 !== operand2;
+        break;
+        case ">":
+        result = operand1 > operand2;
+        break;
+        case ">=":
+        result = operand1 >= operand2;
+        break;
+        case "<":
+        result = operand1 < operand2; 
+        break;
+        case "<=":
+        result = operand1 <= operand1;
+        break; 
+      }
+      break;
+    } 
+  }
+  // "action" on screen 
+  if (typeof(operand1) === "string"){
+    operand1 = '"' + operand1 + '"';
+  }
+  if (typeof(operand2) === "string"){
+    operand2 = '"' + operand2 + '"';
+  }
+  document.getElementById("action").innerHTML = operand1 + mineOperator + operand2;
+  // result on screeen as "You result is"
+  getElementById("result").innerHTML = result;
 }
+
+
