@@ -8,7 +8,7 @@ function ourResult()
   var operand1 = document.getElementById("operand1").value;
   var operand2 = document.getElementById("operand2").value;
 
-  //taking operator type number or string 
+  //taking operand type number or string 
 	var operandType1 = document.getElementById("operand-type1");
   var operandType2 = document.getElementById("operand-type2");
 
@@ -17,7 +17,7 @@ function ourResult()
   var operandValue2 = operandType2.value; 
 
 	//operator arythmetic, comparison etc. 
-  var allOperators = document.getElementByName("operator")
+  var allOperators = document.getElementsByName("operator")
   
   //operands conversion 
   switch (operandValue1) {
